@@ -1,16 +1,7 @@
 from lib.chinese_word_segmentation import segmentation
+from lib import stopwords
 if __name__ == '__main__':
-    # s = "python难不难，c++好简单。"
-    # result = segmentation(s,with_sg=True)
-    # print(result)
-    from queue import PriorityQueue
-
-    q = PriorityQueue()
-
-    q.put(1)
-    q.put(3)
-    q.put(2)
-    sorted(q,)
-    while not q.empty():
-        next_item = q.get()
-        print(next_item)
+    s = "阿里不哥python难不难，c++好简单,这儿,鄙人。"
+    result = segmentation(s,by_word=False,with_sg=False,use_stop_word=False)
+    print(result)
+    # print(stopwords)
